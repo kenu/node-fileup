@@ -1,0 +1,23 @@
+{
+  "name": "kenu",
+  "version": "0.0.0",
+  "description": "code from \r http://www.nodebeginner.org/index-kr.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenu/node-fileup.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kenu/node-fileup/issues"
+  },
+  "dependencies": {
+        "formidable": "*"
+  },
+  "homepage": "https://github.com/kenu/node-fileup"
+}
