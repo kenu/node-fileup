@@ -14,6 +14,7 @@ function start(response) {
     '<form action="/upload" enctype="multipart/form-data" '+
     'method="post">'+
     '<input type="file" name="upload" multiple="multiple">'+
+    '<input type="file" name="upload" multiple="multiple">'+
     '<input type="submit" value="Upload file" />'+
     '</form>'+
     '</body>'+
@@ -33,8 +34,8 @@ function upload(response, request) {
     console.log("parsing done");
     fs.renameSync(files.upload.path, "/tmp/test.png");
     response.writeHead(200, {"Content-Type": "text/html"});
-    response.write("received image:<br/>");
-    response.write("<img src='/show' />");
+    response.write("<body style='background-color: #d0d0ff'>received image:<br/>");
+    response.write("<img src='/show' /></body>");
     response.end();
   });
 }
