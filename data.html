@@ -1,0 +1,17 @@
+<script>
+window.onload = function () {
+    var sc = document.createElement("script");
+    sc.src = "http://apis.daum.net/search/image?q=aoa&apikey=f164fe38d2197d63938f0a77ef342bacc13&output=json&callback=cb";
+document.getElementsByTagName("head")[0].appendChild(sc);
+}
+
+function cb(data) {
+  var html = "";
+  var list = data.channel.item;
+  for(var i in list) {
+    html += "<img src='"+list[i].thumbnail+"'>";
+  }
+  document.getElementById("result").innerHTML = html;
+}
+</script>
+<div id="result"></div>
